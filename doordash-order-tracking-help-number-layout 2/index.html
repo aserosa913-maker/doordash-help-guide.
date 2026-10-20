@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DoorDash Order &amp; Tracking Help</title>
+<meta name="description" content="A blog-style guide to DoorDash order tracking, refunds, billing, delivery, DashPass, and account support.">
+<style>
+:root{--ink:#202b3a;--muted:#687586;--bg:#f2f5f9;--paper:#fff;--line:#e1e7ef;--accent:#2563eb;--accent-dark:#1d4ed8;--accent-soft:#eaf1ff;--navy:#17263b;--gold:#f0b429}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:#2457c5}a:focus{outline:3px solid #b8ccff;outline-offset:3px}
+.topline{height:5px;background:linear-gradient(90deg,#1d4ed8,#7aa7ff)}header{background:#fff;border-bottom:1px solid var(--line)}.nav{max-width:1160px;margin:auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:850;font-size:22px;letter-spacing:-.045em;color:var(--navy)}.brand small{display:block;font:10px/1.4 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.16em;margin-top:3px}.navlinks{display:flex;gap:22px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.04em}.navlinks a{text-decoration:none;color:var(--ink)}.navlinks a:hover{color:var(--accent)}
+.hero{max-width:1160px;margin:auto;padding:58px 28px 38px;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}.kicker{font-size:11px;font-weight:850;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}h1{font-size:clamp(39px,5vw,62px);line-height:1.04;margin:14px 0 18px;font-weight:700}.hero p{font-size:17px;color:var(--muted);max-width:600px;margin:0 0 24px}.hero-art{min-height:280px;border-radius:8px;background:linear-gradient(145deg,#dce8f8,#e9eef7);position:relative;overflow:hidden;padding:28px;display:flex;align-items:center;justify-content:center}.hero-art:before{content:"";position:absolute;inset:17px;border:1px solid #b7c8e2}.journal-card{position:relative;z-index:1;background:#fff;width:min(100%,330px);padding:24px 22px 26px;box-shadow:0 14px 35px #1c35541a;text-align:center;transform:rotate(-2deg);border:1px solid #e1e7ef}.journal-card .rule{height:1px;background:#c5d4eb;margin:0 auto 13px;max-width:180px}.journal-card strong{font-family:Georgia,"Times New Roman",serif;font-size:25px;line-height:1.1;color:var(--navy)}.journal-card p{font-size:12px!important;margin:13px 0 0!important;color:var(--muted)!important}.journal-card .mini-lines{height:64px;margin-top:18px;background:repeating-linear-gradient(to bottom,transparent 0,transparent 11px,#e4eaf2 12px,#e4eaf2 13px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:white;text-decoration:none;border-radius:6px;padding:12px 18px;font-size:13px;font-weight:800;letter-spacing:.02em}.btn:hover{background:var(--accent-dark)}
+.main-layout{max-width:1160px;margin:0 auto;padding:20px 28px 75px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:42px;align-items:start}.section-title{font-size:32px;margin:0 0 5px}.section-sub{color:var(--muted);margin:0 0 27px}.post-list{display:grid;gap:18px}.post{display:grid;grid-template-columns:70px minmax(0,1fr);gap:19px;background:var(--paper);border:1px solid var(--line);padding:22px 24px;border-radius:8px}.post-number{font-family:Georgia,"Times New Roman",serif;font-size:30px;color:#9aabc2;border-right:1px solid var(--line);line-height:1.1;padding-top:3px}.post h3{font-size:23px;line-height:1.2;margin:0 0 8px}.post p{color:var(--muted);margin:0 0 12px;font-size:14px}.post .meta{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}.readmore{font-size:13px;font-weight:800;text-decoration:none}.readmore:hover{text-decoration:underline}
+.sidebar{display:grid;gap:18px}.sidebox{background:var(--paper);border:1px solid var(--line);padding:22px;border-radius:8px}.sidebox h3{font-size:21px;margin:0 0 9px}.sidebox p{color:var(--muted);font-size:13px;margin:0 0 14px}.sidebox .phone{font-size:20px;font-weight:850;filter:blur(2.8px);user-select:none;color:var(--ink);letter-spacing:.02em}.sidebox .phone.official-number{filter:blur(2.8px);user-select:none}.sidebox .side-link{display:block;font-size:13px;font-weight:800;margin-top:12px;text-decoration:none}.topics{list-style:none;margin:0;padding:0}.topics li{padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}.topics li:last-child{border-bottom:0}.topics a{text-decoration:none;color:var(--ink)}.topics a:hover{color:var(--accent)}
+.disclosure{margin-top:26px;padding:16px 18px;background:#edf3ff;border-left:3px solid var(--accent);font-size:12px;color:#455878}
+footer{background:#202b3a;color:#e7ecf4;padding:30px 28px;font-size:12px}footer div{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{color:#c8d8ff}
+.overlay{position:fixed;inset:0;background:rgba(19,30,47,.40);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);display:grid;place-items:center;padding:18px;z-index:10}
+.modal{width:min(100%,475px);max-height:92vh;overflow:auto;background:linear-gradient(155deg,#fff 0%,#f3f7ff 100%);border:1px solid #d8e3f5;border-radius:14px;padding:31px 29px 28px;box-shadow:0 25px 75px #17263b35;position:relative}
+.modal:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#2563eb,#86adff);border-radius:14px 14px 0 0}
+.alert-label{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:13px}.alert-label span{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--accent-soft);font-size:15px}
+.modal h2{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:31px;line-height:1.12;letter-spacing:-.045em;margin:0 0 13px;font-weight:850}.modal .lead{font-size:14px;color:var(--muted);margin:0 0 20px;line-height:1.65}
+.issue-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 19px}
+.issue-list span{display:block;background:#f0f4fb;border:1px solid #dfe7f5;border-radius:7px;padding:8px 10px;font-size:12px;line-height:1.35;font-weight:750;color:#334763}
+.phone-panel{background:#edf3ff;border:1px solid #d7e3fb;border-radius:10px;padding:19px 18px 18px}.phone-panel strong{font-size:15px}.phone-panel p{font-size:13px;color:#5b6980;margin:5px 0 13px}.phone-panel .number{font-size:27px;font-weight:900;letter-spacing:-.035em;color:#1e345d}.phone-panel .btn{width:100%;margin-top:12px;padding:13px 16px}.modal .tiny{font-size:11px;color:var(--muted);margin:15px 0 0}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:40px}.hero-art{min-height:230px}.main-layout{grid-template-columns:1fr;gap:25px}.sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:12px}}
+@media(max-width:560px){.issue-list{grid-template-columns:1fr 1fr;gap:6px}.issue-list span{font-size:11px;padding:7px 8px}.nav{padding:16px 18px}.brand{font-size:19px}.navlinks a:not(.nav-cta){display:none}.hero{padding:38px 18px 25px}.hero-art{min-height:215px}.main-layout{padding:15px 18px 50px}.post{grid-template-columns:43px minmax(0,1fr);padding:17px 15px;gap:12px}.post-number{font-size:25px}.post h3{font-size:20px}.sidebar{grid-template-columns:1fr}.modal{padding:27px 21px 22px}.modal h2{font-size:28px}.phone-panel .number{font-size:25px}}
+.official-middle-number{filter:none}.official-middle-number strong{filter:blur(2.8px);user-select:none}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header><div class="nav"><div class="brand">DoorDash Order &amp; Tracking Help<small>Practical guides for order and delivery questions</small></div><nav class="navlinks"><a href="#articles">LATEST ARTICLES</a><a href="#topics">HELP TOPICS</a><a href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">OFFICIAL RESOURCES ↗</a></nav></div></header>
+<section class="hero">
+<div><div class="kicker">The order-help journal</div><h1>Clear answers for everyday delivery questions.</h1><p>Browse straightforward guides to tracking orders, requesting refunds, understanding charges, managing DashPass, and finding the right support for common DoorDash questions.</p><a class="btn" href="#articles">EXPLORE THE GUIDES ↓</a></div>
+<div class="hero-art"><div class="journal-card"><div class="rule"></div><strong>DoorDash Order<br>&amp; Tracking Help</strong><p>Helpful notes for smoother deliveries</p><div class="mini-lines"></div></div></div>
+</section>
+<div class="main-layout">
+<main id="articles"><div class="kicker">From the journal</div><h2 class="section-title">Latest help guides</h2><p class="section-sub">Quick reads organized around the questions customers ask most often.</p>
+<div class="post-list">
+<article class="post"><div class="post-number">01</div><div><div class="meta">Order tracking · 4 min read</div><h3>How to check the status of a DoorDash order</h3><p>Where to find delivery updates, what different status messages mean, and what to do if an order appears delayed.</p><a class="readmore" href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Read the guide ↗</a></div></article>
+<article class="post"><div class="post-number">02</div><div><div class="meta">Refunds · 5 min read</div><h3>What to do if an order is missing or incorrect</h3><p>Steps to review an order, report missing items, and find the relevant refund options in DoorDash support.</p><a class="readmore" href="https://help.doordash.com/consumers/s/global-search/need%20refund?language=en_US">Read the guide ↗</a></div></article>
+<article class="post"><div class="post-number">03</div><div><div class="meta">Payments · 3 min read</div><h3>Understanding a DoorDash charge or payment issue</h3><p>Learn where to review charges, how to check payment details, and where to look for official billing assistance.</p><a class="readmore" href="https://help.doordash.com/en-us/consumers/category/payments">Read the guide ↗</a></div></article>
+<article class="post"><div class="post-number">04</div><div><div class="meta">Membership · 4 min read</div><h3>Finding help with DashPass and account access</h3><p>Where to find membership settings, account troubleshooting, and support for app or sign-in problems.</p><a class="readmore" href="https://help.doordash.com/en-us/consumers/category/troubleshooting">Read the guide ↗</a></div></article>
+<article class="post"><div class="post-number">05</div><div><div class="meta">Delivery issues · 4 min read</div><h3>What to do when a delivery is late</h3><p>Check the latest order details, review the available help options, and find the right next step.</p><a class="readmore" href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Read the guide ↗</a></div></article>
+</div>
+<div class="disclosure">This is an informational website, not an official DoorDash website. For account-specific help, use DoorDash’s Help Center or the DoorDash app.</div>
+</main>
+<aside class="sidebar">
+<section class="sidebox"><div class="kicker">Official DoorDash support</div><h3>Customer service number</h3><p>For official DoorDash customer support, use the published general support number below.</p><div class="phone official-number" aria-label="Official DoorDash general support number">855-431-0459</div><a class="side-link" href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Open official support ↗</a></section>
+<section class="sidebox" id="topics"><h3>Browse by topic</h3><ul class="topics"><li><a href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Order tracking</a></li><li><a href="https://help.doordash.com/consumers/s/global-search/need%20refund?language=en_US">Refunds and missing items</a></li><li><a href="https://help.doordash.com/en-us/consumers/category/payments">Billing and payments</a></li><li><a href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Cancellations and delivery</a></li><li><a href="https://help.doordash.com/en-us/consumers/category/troubleshooting">DashPass and app issues</a></li></ul></section>
+<section class="sidebox"><h3>Official help resources</h3><p>For order-specific information, use the official DoorDash Help Center or in-app support.</p><a class="side-link" href="https://help.doordash.com/consumers/s/topic/0TO2L000000TiBGWA0/customer-support?language=en_US">Visit DoorDash Help Center ↗</a></section>
+</aside>
+</div>
+<footer><div><span>DoorDash Order &amp; Tracking Help · Informational resource</span><span>Not affiliated with or endorsed by DoorDash.</span></div></footer>
+<div class="overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+<div class="modal">
+<div class="alert-label"><span>!</span> Quick assistance</div>
+<h2 id="popup-title">Need help with DoorDash?</h2>
+<p class="lead">What do you need help with today? Choose the topic that best matches your DoorDash question.</p>
+<div class="issue-list" aria-label="Common DoorDash help topics">
+  <span>Order tracking</span>
+  <span>Refunds &amp; missing items</span>
+  <span>Billing &amp; payments</span>
+  <span>Late deliveries</span>
+  <span>Incorrect orders</span>
+  <span>Cancellations</span>
+  <span>DashPass &amp; promotions</span>
+  <span>Account or app issues</span>
+</div>
+<div class="phone-panel"><strong>Customer assistance line</strong><p>Call for guidance on common food-delivery order questions and help finding the right next step.</p><a class="btn" href="tel:+15077220465">CALL 507-722-0465</a></div>
+
+</div>
+</div>
+</body>
+</html>
