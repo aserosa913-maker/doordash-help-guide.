@@ -1,0 +1,1 @@
+Website update: removed the separate number banner at the top of the page. The independent help number 507-722-0465 is now in a prominent call button near the top of the opening popup, immediately below the intro and before the topic list. The independent third-party disclosure remains visible.

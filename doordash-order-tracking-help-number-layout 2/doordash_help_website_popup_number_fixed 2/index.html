@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DoorDash Order Help Guide | Independent Resource</title>
+<style>
+:root{--blue:#2864ed;--ink:#17243a;--muted:#64748b;--line:#e1e8f2;--pale:#eff5ff}*{box-sizing:border-box}body{margin:0;background:#f4f7fc;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}a{color:var(--blue);text-decoration:none}.head{max-width:1160px;margin:auto;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{display:flex;gap:12px;align-items:center;font-weight:800}.logo{width:42px;height:42px;border-radius:13px;background:#e1edff;color:var(--blue);display:grid;place-items:center;font-size:22px}.brand small{display:block;color:var(--muted);font-size:11px;font-weight:500;margin-top:4px}.layout{max-width:1160px;margin:10px auto 50px;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px}.eyebrow{font-size:11px;color:var(--blue);letter-spacing:.14em;font-weight:850;text-transform:uppercase}.top{padding:20px 0}.top h1{font: bold clamp(32px,4vw,44px)/1.1 Georgia,serif;letter-spacing:-.03em;margin:10px 0}.top p,.guide p,.side p{color:var(--muted);font-size:13px;line-height:1.7}.guide{display:grid;grid-template-columns:58px 1fr;gap:15px;padding:21px;background:white;border:1px solid var(--line);border-radius:15px;margin-bottom:14px}.num{font:30px Georgia,serif;color:#a9bddb}.meta{font-size:10px;color:var(--blue);font-weight:850;letter-spacing:.1em;text-transform:uppercase}.guide h2,.side h2{font: bold 22px/1.2 Georgia,serif;margin:7px 0}.guide p{margin:0 0 10px}.read{font-size:12px;font-weight:800}.side{padding-top:25px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;margin-bottom:15px}.card h2{margin-top:0}.card p{font-size:12px}.topic-link{display:block;padding:11px 0;border-top:1px solid #edf1f7;color:#45546a;font-size:12px;font-weight:650}.foot{max-width:1160px;margin:auto;padding:0 24px 28px;color:var(--muted);font-size:11px;line-height:1.6}
+.overlay{position:fixed;inset:0;background:rgba(24,37,58,.38);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;padding:16px;z-index:10;overflow:auto}.popup{position:relative;width:min(100%,510px);max-height:calc(100vh - 32px);overflow:auto;background:linear-gradient(145deg,#fff,#f6f9ff);border:1px solid white;border-top:5px solid #3976ff;border-radius:17px;padding:27px 30px 23px;box-shadow:0 25px 90px #14274845}.close{position:absolute;right:12px;top:12px;border:0;border-radius:50%;background:#edf2f9;width:31px;height:31px;font-size:21px;color:#64748b;cursor:pointer}.kicker{display:flex;align-items:center;gap:8px;color:var(--blue);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:900;margin-bottom:13px;padding-right:30px}.kicker span{width:25px;height:25px;border-radius:8px;background:#e8f0ff;display:grid;place-items:center;font-size:14px}.popup h2{font-size:clamp(26px,4vw,32px);line-height:1.12;letter-spacing:-.045em;margin:0 25px 12px 0}.intro{font-size:13px;color:#65748b;line-height:1.65;margin:0 0 19px}.topics{display:grid;grid-template-columns:1fr 1fr;gap:8px}.topic{border:1px solid #dce6f5;border-radius:9px;background:#f0f5fd;padding:10px 11px;font-size:12px;font-weight:750;color:#344760;display:flex;align-items:center;gap:8px}.topic:before{content:"";width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:#3b78f6}.callcard{margin-top:17px;padding:16px 17px;background:#edf4ff;border:1px solid #d8e6ff;border-radius:12px}.callcard h3{font-size:14px;margin:0 0 7px}.callcard p{font-size:12px;line-height:1.6;color:#65748b;margin:0 0 13px}.call{display:flex;justify-content:center;align-items:center;width:100%;padding:14px 12px;border-radius:8px;background:var(--blue);color:white;text-align:center;font-size:12px;font-weight:900;letter-spacing:.04em}.disclosure{border-top:1px solid #e6ebf3;margin-top:15px;padding-top:12px;font-size:10.5px;line-height:1.55;color:#68768a}.disclosure strong{color:#33445c}@media(max-width:800px){.layout{grid-template-columns:1fr}.side{padding-top:0}.head{padding:18px}.layout{padding:0 18px}}@media(max-width:500px){.topics{gap:7px}.topic{font-size:11px;padding:10px 8px}.popup{padding:24px 17px 19px}.guide{grid-template-columns:40px 1fr;padding:16px;gap:10px}.side{display:block}}
+
+.popup-title-row{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.help-mark{width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:#fff0ef;border:1px solid #ffd3d0;display:grid;place-items:center;color:#c62828;font-weight:800;font-size:22px}
+.popup-title-row h2{margin:0}
+
+
+/* Readability update: larger popup text and topic labels */
+.modal, .modal-content { max-width: min(96vw, 560px); }
+.modal h2 { font-size: 34px; line-height: 1.12; }
+.modal p { font-size: 16px; line-height: 1.5; }
+.issue-list button, .issue-list a, .issue-list span { font-size: 15px; line-height: 1.35; }
+.phone-panel { padding: 20px; }
+.phone-panel strong { font-size: 17px; }
+.phone-panel p { font-size: 15px; }
+.disclosure, .disclosure p, .modal .disclosure { font-size: 11px !important; line-height: 1.4 !important; }
+@media (max-width: 560px) {
+  .modal h2 { font-size: 28px; }
+  .modal p { font-size: 15px; }
+  .issue-list button, .issue-list a, .issue-list span { font-size: 14px; }
+}
+
+
+/* Expanded topic descriptions inside the popup */
+.topics{grid-template-columns:1fr 1fr;gap:9px}
+.topic{display:block;padding:11px 12px;font-size:14px;line-height:1.3}
+.topic:before{display:inline-block;margin:0 7px 2px 0}
+.topic strong{font-size:14px;font-weight:800}
+.topic span{display:block;margin-top:6px;padding-left:13px;font-size:12px;font-weight:500;line-height:1.45;color:#5c6d83}
+@media(max-width:560px){.topics{grid-template-columns:1fr}.topic{font-size:14px}.topic span{font-size:12px}}
+
+
+/* Popup-first contact: number appears immediately in the popup, not in a page banner. */
+.popup{padding:22px 26px 18px}
+.popup .intro{margin-bottom:12px}
+.popup .callcard{margin:0 0 13px;padding:12px 14px}
+.popup .callcard h3{font-size:14px;margin-bottom:4px}
+.popup .callcard p{font-size:12px;line-height:1.4;margin-bottom:9px}
+.popup .call{color:#fff!important;background:#2864ed;font-size:16px;font-weight:900;letter-spacing:.02em;padding:14px 12px}
+.popup .topics{gap:7px}
+.popup .topic{padding:8px 10px}
+.popup .topic span{margin-top:4px;font-size:11px;line-height:1.35}
+.popup .disclosure{font-size:9.5px;line-height:1.35;margin-top:14px;padding-top:10px}
+@media(max-width:560px){
+ .popup{padding:22px 15px 16px}
+ .popup h2{font-size:26px}
+ .popup .call{font-size:16px}
+ .popup .topic{padding:8px}
+ .popup .topic span{font-size:11px}
+}
+
+
+/* Final override: make the complete independent-service disclaimer genuinely smaller. */
+.popup .disclosure,
+.popup .disclosure strong,
+.popup .disclosure p,
+.modal .disclosure { font-size: 9.5px !important; line-height: 1.35 !important; }
+.popup .disclosure { margin-top: 14px !important; padding-top: 10px !important; }
+.popup .close { position:absolute; right:12px; top:12px; border:0; border-radius:50%; background:#edf2f9; width:31px; height:31px; font-size:21px; color:#64748b; cursor:pointer; }
+</style></head><body>
+<header class="head"><div class="brand"><div class="logo">i</div><div>DoorDash Order Help Guide<small>Independent informational resource</small></div></div><a href="https://help.doordash.com/consumers/s/" target="_blank" rel="noopener">Official Help Center ↗</a></header>
+
+<div class="official-topbar" role="region" aria-label="Official DoorDash support contact">
+  <div class="official-topbar-inner">
+    <div>
+      <span class="official-label">Official DoorDash customer service</span>
+      <span class="official-caption">For official order-specific assistance</span>
+    </div>
+    <div class="official-contact">
+      <a class="official-phone" href="tel:8554310459">855-431-0459</a>
+      <a class="official-link" href="https://help.doordash.com/consumers/s/" target="_blank" rel="noopener noreferrer">Official Help Center ↗</a>
+    </div>
+  </div>
+</div>
+<style>
+.official-topbar{max-width:1112px;margin:0 auto;padding:0 24px}
+.official-topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;background:#fff;border:1px solid #dfe7f2;border-left:4px solid #2864ed;border-radius:13px;padding:13px 18px;box-shadow:0 4px 16px rgba(25,50,85,.035)}
+.official-label{display:block;font-size:12px;font-weight:850;color:#24344d}
+.official-caption{display:block;font-size:11px;color:#64748b;margin-top:4px}
+.official-contact{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.official-phone{font-size:18px;font-weight:900;letter-spacing:-.02em;color:#1d4fc3}
+.official-link{font-size:11px;font-weight:800;white-space:nowrap}
+@media(max-width:520px){.official-topbar{padding:0 18px}.official-topbar-inner{align-items:flex-start;flex-direction:column;gap:10px}.official-contact{gap:13px}.official-phone{font-size:17px}}
+</style>
+
+<main class="layout"><section><div class="top"><div class="eyebrow">From the journal</div><h1>Latest help guides</h1><p>Quick reads organized around common food-delivery questions, with practical pointers on where to find the right information.</p></div>
+<article class="guide"><div class="num">01</div><div><div class="meta">Order tracking · 4 min read</div><h2>How to check the status of a delivery</h2><p>Where to find delivery updates, what order statuses mean, and what to check if an order appears delayed.</p><a class="read" href="#tracking">Read the guide ↗</a></div></article>
+<article class="guide"><div class="num">02</div><div><div class="meta">Refunds · 5 min read</div><h2>What to do if an order is missing items</h2><p>Steps to review order details and find the appropriate channel to report an issue.</p><a class="read" href="#refunds">Read the guide ↗</a></div></article>
+<article class="guide"><div class="num">03</div><div><div class="meta">Payments · 3 min read</div><h2>Understanding a charge or payment issue</h2><p>Learn how to review charges, check payment details, and find billing information.</p><a class="read" href="#payments">Read the guide ↗</a></div></article>
+<article class="guide"><div class="num">04</div><div><div class="meta">Delivery · 4 min read</div><h2>What to check when a delivery is late</h2><p>Review the latest delivery estimate and consider the next steps available in the app.</p><a class="read" href="#delivery">Read the guide ↗</a></div></article></section>
+<aside class="side"><section class="card"><div class="eyebrow">Official support</div><h2>DoorDash customer service</h2><p>For official order-specific support, check current contact options in the DoorDash app or Help Center.</p><a class="read" href="https://help.doordash.com/consumers/s/" target="_blank" rel="noopener">Open official support ↗</a></section><section class="card"><h2>Browse by topic</h2><a class="topic-link" href="#tracking">Order tracking</a><a class="topic-link" href="#refunds">Refunds and missing items</a><a class="topic-link" href="#payments">Billing and payments</a><a class="topic-link" href="#delivery">Cancellations and delivery</a><a class="topic-link" href="#account">DashPass and app issues</a></section><section class="card"><div class="eyebrow">Official DoorDash support</div><h2>Customer service</h2><p>For official order-specific help, contact DoorDash through its official support channels.</p><strong style="display:block;font-size:21px;letter-spacing:-.02em;margin:10px 0 12px">855-431-0459</strong><a class="read" href="https://help.doordash.com/consumers/s/" target="_blank" rel="noopener noreferrer">Verify or visit official support ↗</a></section>
+<section class="card"><h2>Independent help resource</h2><p>This third-party guide provides general information only and is not operated by or affiliated with DoorDash.</p></section></aside></main>
+<footer class="foot">Independent third-party informational website. DoorDash and related trademarks belong to their respective owners. This site is not affiliated with or endorsed by DoorDash. For order-specific account actions, use official DoorDash channels.</footer>
+<div class="overlay" id="popup" role="dialog" aria-modal="true" aria-labelledby="title"><section class="popup"><button class="close" type="button" aria-label="Close help dialog" id="closePopup">×</button><div class="kicker"><span>!</span> Quick assistance</div><div class="popup-title-row"><span class="help-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 8.5h11l1.1 11H5.4l1.1-11Z" fill="#C62828"/><path d="M9 9V6.8a3 3 0 0 1 6 0V9" stroke="#C62828" stroke-width="1.8" stroke-linecap="round"/><path d="M9 12.5h.01M15 12.5h.01" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span><h2 id="title">Need help with DoorDash?</h2></div><p class="intro">What do you need help with today? Choose the topic that best matches your DoorDash question.</p><div class="callcard"><h3>Independent customer assistance</h3><p>Call for general guidance on common food-delivery questions and help finding the right next step.</p><a class="call" href="tel:5077220465">☎ &nbsp; CALL 507-722-0465</a></div><div class="topics">
+<div class="topic"><strong>Order tracking</strong><span>Find the order status, delivery progress, and where to check updates.</span></div>
+<div class="topic"><strong>Refunds &amp; missing items</strong><span>Learn what to check when food or items are missing and where refund requests are handled.</span></div>
+<div class="topic"><strong>Billing &amp; payments</strong><span>Review charges, payment methods, receipts, and possible duplicate transactions.</span></div>
+<div class="topic"><strong>Late deliveries</strong><span>Check delivery estimates and what to do when an order is taking longer than expected.</span></div>
+<div class="topic"><strong>Incorrect orders</strong><span>Find the steps for reporting the wrong item, order, or delivery.</span></div>
+<div class="topic"><strong>Cancellations</strong><span>Understand cancellation options and that fees or refunds depend on the order status.</span></div>
+<div class="topic"><strong>DashPass &amp; promotions</strong><span>Get guidance on membership billing, benefits, promo codes, and offer eligibility.</span></div>
+<div class="topic"><strong>Account or app issues</strong><span>Basic troubleshooting for sign-in, app errors, settings, and account access.</span></div>
+</div><div class="disclosure"><strong>Independent third-party service:</strong> We provide general guidance and are not DoorDash or official DoorDash support. Account access, order changes, payment processing, and refund decisions must be handled through DoorDash's official channels.</div></section></div>
+<script>const p=document.getElementById('popup');function closePopup(){p.style.display='none'}document.getElementById('closePopup').addEventListener('click',closePopup);/* Clicking outside or pressing Escape does not dismiss the dialog; the visible close control remains available. */</script></body></html>
